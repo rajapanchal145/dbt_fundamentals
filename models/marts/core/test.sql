@@ -17,13 +17,12 @@ select
     order_id,
     payment_id,
     customer_id,
-    status,
-    payment_status,
-    payment_method
-
-
-
-
+    --order_status,
+    payment_method,
+    --payment_amount,
+    --payment_status
+    order_date
+    --payment_date
 
 from orders 
 left join customers using (customer_id)
