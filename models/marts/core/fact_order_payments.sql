@@ -14,15 +14,17 @@ payments as (
 )
 
 select
+    row_number() over (order by order_id) as ID,
     order_id,
     payment_id,
     customer_id,
-    --order_status,
+    orders.status as order_status,
     payment_method,
-    --payment_amount,
-    --payment_status,
-    order_date
-    --payment_date
+    amount as payment_amount,
+    payments.status as payment_status,
+    order_date,
+    created_at as payment_date,
+    current_timestamp() as created_at
 
 from orders 
 left join customers using (customer_id)
