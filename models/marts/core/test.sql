@@ -20,7 +20,7 @@ select
     --order_status,
     payment_method,
     --payment_amount,
-    --payment_status
+    --payment_status,
     order_date
     --payment_date
 
