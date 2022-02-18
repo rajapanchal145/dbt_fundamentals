@@ -40,6 +40,6 @@ from orders
 left join customers using (customer_id)
 left join payments using (order_id)
 left join avg_day_orders using (customer_id)
-group by customer_id;
+group by customer_id
 
 

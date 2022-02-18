@@ -1,8 +1,3 @@
-{{
-    config(
-        materialized='incremental'
-    )
-}}
 
 with customers as (
     
