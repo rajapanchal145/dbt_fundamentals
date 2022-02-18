@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: fact_cohort_analysis
+    columns: 
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+
+  - name: fact_order_payment
+    columns: 
+      - name: order_id
+        tests:
+          - unique
+          - not_null
+      
